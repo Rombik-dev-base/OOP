@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/1285166/CLionProjects/parser/main.cpp
+iostream
+-
+pars.h
+C:/Users/1285166/CLionProjects/parser/pars.h
+
+C:/Users/1285166/CLionProjects/parser/pars.h
+string
+-
+unordered_map
+-
+vector
+-
+fstream
+-
+iostream
+-
+algorithm
+-
+regex
+-
+exception
+-
+
