@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/1285166/CLionProjects/Shop(hyina)/exceptions.h
+exception
+-
+
+C:/Users/1285166/CLionProjects/Shop(hyina)/main.cpp
+shop.h
+C:/Users/1285166/CLionProjects/Shop(hyina)/shop.h
+shop_list.h
+C:/Users/1285166/CLionProjects/Shop(hyina)/shop_list.h
+
+C:/Users/1285166/CLionProjects/Shop(hyina)/shop.h
+unordered_map
+-
+string
+-
+fstream
+-
+iostream
+-
+algorithm
+-
+windows.h
+-
+vector
+-
+exceptions.h
+C:/Users/1285166/CLionProjects/Shop(hyina)/exceptions.h
+
+C:/Users/1285166/CLionProjects/Shop(hyina)/shop_list.h
+shop.h
+C:/Users/1285166/CLionProjects/Shop(hyina)/shop.h
+list
+-
+
