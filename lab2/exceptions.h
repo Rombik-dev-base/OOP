@@ -2,8 +2,8 @@
 // Created by 1285166 on 30.10.2020.
 //
 
-#ifndef SHOP_HYINA__EXCEPTIONS_H
-#define SHOP_HYINA__EXCEPTIONS_H
+#ifndef SHOP__EXCEPTIONS_H
+#define SHOP__EXCEPTIONS_H
 #include <exception>
 
 class my_exception : public std :: exception{
@@ -18,4 +18,4 @@ private:
     char *excepinfo;
 };
 
-#endif //SHOP_HYINA__EXCEPTIONS_H
+#endif //SHOP__EXCEPTIONS_H
