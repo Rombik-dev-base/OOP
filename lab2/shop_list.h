@@ -2,8 +2,8 @@
 // Created by 1285166 on 30.10.2020.
 //
 
-#ifndef SHOP_HYINA__SHOP_LIST_H
-#define SHOP_HYINA__SHOP_LIST_H
+#ifndef SHOP__SHOP_LIST_H
+#define SHOP__SHOP_LIST_H
 #include "shop.h"
 #include <list>
 
