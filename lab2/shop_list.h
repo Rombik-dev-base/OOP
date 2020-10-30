@@ -21,4 +21,4 @@ private:
     std :: list <Shop> shops;
 };
 
-#endif //SHOP_HYINA__SHOP_LIST_H
+#endif //SHOP__SHOP_LIST_H
