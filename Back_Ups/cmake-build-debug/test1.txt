@@ -1,0 +1,133 @@
+//
+// Created by 1285166 on 27.11.2020.
+//
+
+#include "Back_Up.h"
+#include <string>
+#include <bits/stdc++.h>
+
+Back_Up :: Back_Up(const std :: vector <std :: string> &path){
+    paths = path;
+    update_file_info();
+}
+
+void Back_Up :: update_file_info() {
+    files.clear();
+    for(int i = 0; i < paths.size();i++){
+        files.push_back({paths[i],fileSize(paths[i].c_str())});
+    }
+}
+
+std :: string Back_Up :: create_point(const std::string &type) {
+    if(type == "full"){
+        Full_point *me = new Full_point(files);
+        back_up_points.push_back(me);
+    }
+    else{
+        return "none";
+    }
+    return "done";
+}
+
+void Back_Up :: print_point_info(const unsigned long &num) {
+    std :: cout << back_up_points[num]->point_info() << '\n';
+}
+
+unsigned long long Back_Up :: fileSize(const char *add){
+    std :: ifstream mySource;
+    mySource.open(add, std :: ios_base::binary);
+    mySource.seekg(0,std :: ios_base::end);
+    unsigned long long  size = mySource.tellg();
+    mySource.close();
+    return size;
+}
+
+EWFWEF
+WEF
+WQEF
+Q34F
+34QF
+Q34F
+Q34
+FQ3
+FQ3
+4F34F3Q4F
+Q3FQ
+34FQ34FQ34F3Q
+FQ3
+FQ3
+FQ3F
+Q34
+FQ34
+FQ34
+FQ34FQ34FQ34FQ34
+FQ34
+F34F
+34FQ34FQ34F3
+Q4FQ3
+FQ34
+F34Q
+F34
+F34F34F4jsdfjweklfjklwaefjlkawjelkfjdlkjssdaffffffffffffffffffffffffffffsadfasd
+fad
+sf
+awf
+ewf
+qwef
+wef
+q2q
+f
+23f
+342fqf2	
+f	2
+f2	3
+f23	
+f2	3f2	f	2f23f
+23fs
+df
+wF
+ASD
+FW
+FDS
+f
+DWAFWEEEEEEEEEE
+WEFWEFWE
+
+
+Back_Up test({"test1.txt","test2.txt"});
+    test.create_point("full");
+    test.print_point_info(0);
+    int n = 5;
+    Sleep(10000);
+    test.create_point("delta");
+    test.print_point_info(1);
+    test.create_point("full");
+    std :: cout << test.print_amount_of_points() << '\n';
+    test.delete_by_amount(2);
+    std :: cout << test.print_amount_of_points() << '\n';
+    test.delete_by_amount(1);
+    std :: cout << test.print_amount_of_points() << '\n';
+    test.print_point_info(0);
+    test.create_point("full");
+    test.print_point_info(0);
+    Sleep(10000);
+    test.create_point("delta");
+    test.print_point_info(1);
+    test.create_point("full");
+    test.delete_by_size(2100);
+    test.print_amount_of_points();
+    test.print_point_info(0);
+
+
+    Back_Up test({"test1.txt","test2.txt"});
+        test.create_point("full");
+        Sleep(25000);
+        std :: string time = currentDateTime();
+        Sleep(1000);
+        test.create_point("full");
+        std :: cout << test.print_amount_of_points() << '\n';
+        test.print_point_info(0);
+        test.delete_by_date(time);
+        std :: cout << test.print_amount_of_points() << '\n';
+        test.print_point_info(0);
+        return 0;
