@@ -83,3 +83,7 @@ void Client::cancel_transaction() {
         acc->add_money(transactions[num].money);
     transactions.erase(transactions.begin()+num);
 }
+
+void Client::end_month() {
+    acc->end_month();
+}

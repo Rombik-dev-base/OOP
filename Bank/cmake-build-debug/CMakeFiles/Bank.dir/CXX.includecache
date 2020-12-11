@@ -10,39 +10,13 @@ C:/Users/1285166/CLionProjects/Bank/accounts/account.h
 string
 -
 
-C:/Users/1285166/CLionProjects/Bank/accounts/credit.h
-account.h
-C:/Users/1285166/CLionProjects/Bank/accounts/account.h
-
+C:/Users/1285166/CLionProjects/Bank/accounts/debit.cpp
+debit.h
 C:/Users/1285166/CLionProjects/Bank/accounts/debit.h
-account.h
-C:/Users/1285166/CLionProjects/Bank/accounts/account.h
-
-C:/Users/1285166/CLionProjects/Bank/accounts/deposit.h
-account.h
-C:/Users/1285166/CLionProjects/Bank/accounts/account.h
-
-C:/Users/1285166/CLionProjects/Bank/bank.cpp
-bank.h
-C:/Users/1285166/CLionProjects/Bank/bank.h
-
-C:/Users/1285166/CLionProjects/Bank/bank.h
-client.h
-C:/Users/1285166/CLionProjects/Bank/client.h
-vector
--
 iostream
 -
 
-C:/Users/1285166/CLionProjects/Bank/client.h
-string
--
-vector
--
-accounts/credit.h
-C:/Users/1285166/CLionProjects/Bank/accounts/credit.h
-accounts/deposit.h
-C:/Users/1285166/CLionProjects/Bank/accounts/deposit.h
-accounts/debit.h
 C:/Users/1285166/CLionProjects/Bank/accounts/debit.h
+account.h
+C:/Users/1285166/CLionProjects/Bank/accounts/account.h
 

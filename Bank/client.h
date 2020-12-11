@@ -42,6 +42,7 @@ public:
     void skip_day(const float &Percent, const float &Percent_boost);
     std :: string acc_type();
     void cancel_transaction();
+    void end_month();
 private:
     void add_transaction(const std :: string &type, const float &money);
     client_data *me = nullptr;

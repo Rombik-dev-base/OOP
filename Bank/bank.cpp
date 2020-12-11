@@ -36,10 +36,16 @@ float Bank::show_client_status(const unsigned int &cliend_id) {
 }
 
 void Bank::time_lapse(const unsigned short &years, const unsigned short &months, const unsigned short &days) {
-    unsigned long long day = years*365+months*31+days;
+    unsigned long long Days = years*365+months*31+days;
     for(int i = 0; i < storage.size();i++)
-        for(int i = 0 ; i < day;i++)
+        for(int j = 0 ; j < Days;j++) {
             skip_day(storage[i]);
+            day += 1;
+            if(day == 31) {
+                storage[i].end_month();
+                day = 0;
+            }
+        }
 }
 
 void Bank::skip_day(Client &client) {

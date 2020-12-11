@@ -16,7 +16,7 @@ public:
     virtual float return_money() override;
 private:
     float money;
-    float profit;
+    float profit = 0;
     unsigned int block_days;
 };
 

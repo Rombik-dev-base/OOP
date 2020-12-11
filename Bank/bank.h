@@ -22,7 +22,7 @@ private:
     float percent;
     float percent_boost;
     float commission;
-    unsigned short day;
+    unsigned short day = 0;
     std :: vector <Client> storage;
 };
 

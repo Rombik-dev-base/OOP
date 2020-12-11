@@ -3,17 +3,22 @@
 //
 
 #include "debit.h"
+#include <iostream>
 
 Debit ::Debit(const float &start_money) {
     money = start_money;
+    profit = 0;
 }
 
 void Debit ::end_day(const float &Percent, const float &Percent_boost) {
-    profit = money*Percent;
+    std :: cout << profit << '\n';
+    profit += money*Percent;
 }
 
 void Debit :: end_month() {
+    std :: cout << profit << '\n';
     money += profit;
+    profit = 0;
 }
 bool Debit :: withdraw(const float &Money) {
     if(money-Money < 0)
