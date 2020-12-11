@@ -22,3 +22,12 @@ bool Debit :: withdraw(const float &Money) {
         money -= Money;
     return true;
 }
+
+bool Debit::add_money(const float &Money) {
+    money+=Money;
+    return true;
+}
+
+float Debit::return_money() {
+    return money;
+}

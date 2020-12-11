@@ -33,7 +33,15 @@ bool Deposit ::withdraw(const float &Money) {
             money -= Money;
         return true;
     }
-    return false
+    return false;
 }
 
+bool Deposit::add_money(const float &Money) {
+    money+=Money;
+    return true;
+}
+
+float Deposit::return_money() {
+    return money;
+}
 

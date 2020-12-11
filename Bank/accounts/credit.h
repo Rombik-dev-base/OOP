@@ -12,6 +12,8 @@ public:
     virtual void end_day(const float &Percent, const float &Percent_boost = 0) override;
     virtual void end_month() override;
     virtual bool withdraw(const float &Money) override;
+    virtual bool add_money(const float &Money) override;
+    virtual float return_money() override;
 private:
     float money;
 };

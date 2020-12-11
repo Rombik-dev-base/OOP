@@ -8,6 +8,15 @@ Credit ::Credit(const float &start_money) {
     money = start_money;
 }
 
+bool Credit::add_money(const float &Money) {
+    money+=Money;
+    return true;
+}
+
+float Credit::return_money() {
+    return money;
+}
+
 void Credit :: end_day(const float &Percent, const float &Percent_boost) {
     if(money < 0)
         money -= abs(money)*Percent;

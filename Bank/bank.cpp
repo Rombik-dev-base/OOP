@@ -10,7 +10,7 @@ Bank::Bank(const float &Percent, const float &Percent_boost, const float &Commis
     commission = Commission;
 }
 
-void Bank::add_client(const std::string &Name, const std::string &Address, const std::string &Pass, const std::string &Account_type,const long long &start_money = 0) {
+void Bank::add_client(const std::string &Name, const std::string &Address, const std::string &Pass, const std::string &Account_type,const float &start_money) {
     Client *client = new Client(Name,Address,Pass,Account_type,start_money);
     storage.push_back(*client);
 }
@@ -28,6 +28,7 @@ void Bank::transaction(const std::string &type, const float &money, const int &c
         storage[client_id_from].make_transaction(type,money);
         return;
     }
+    storage[client_id_from].make_transaction(type,money);
 }
 
 float Bank::show_client_status(const unsigned int &cliend_id) {
@@ -49,5 +50,5 @@ void Bank::skip_day(Client &client) {
 }
 
 void Bank::cancel_transaction(const unsigned int &id) {
-    storage[id].cancel_transaction();   
+    storage[id].cancel_transaction();
 }
