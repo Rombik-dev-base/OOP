@@ -5,14 +5,15 @@
 #include "debit.h"
 #include <iostream>
 
-Debit ::Debit(const float &start_money) {
+Debit ::Debit(const float &start_money, double percent) {
+    percent_ = percent;
     money = start_money;
     profit = 0;
 }
 
-void Debit ::end_day(const float &Percent, const float &Percent_boost) {
+void Debit ::end_day() {
     std :: cout << profit << '\n';
-    profit += money*Percent;
+    profit += money*percent_;
 }
 
 void Debit :: end_month() {
@@ -35,4 +36,8 @@ bool Debit::add_money(const float &Money) {
 
 float Debit::return_money() {
     return money;
+}
+
+std::string Debit :: type() {
+    return type_;
 }

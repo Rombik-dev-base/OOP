@@ -4,7 +4,8 @@
 
 #include "credit.h"
 
-Credit ::Credit(const float &start_money) {
+Credit ::Credit(const float &start_money, double credit_per) {
+    percent_ = credit_per;
     money = start_money;
 }
 
@@ -17,9 +18,13 @@ float Credit::return_money() {
     return money;
 }
 
-void Credit :: end_day(const float &Percent, const float &Percent_boost) {
+void Credit :: end_day() {
     if(money < 0)
-        money -= abs(money)*Percent;
+        money -= abs(money)*percent_;
+}
+
+std :: string Credit ::type() {
+    return type_;
 }
 
 void Credit ::end_month() {

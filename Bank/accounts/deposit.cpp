@@ -4,20 +4,22 @@
 
 #include "deposit.h"
 
-Deposit :: Deposit(const float &start_money, const unsigned int &block) {
+Deposit :: Deposit(const float &start_money, const unsigned int &block, double percent, double boost) {
+    boost_ = boost;
+    percent_ = percent;
     money = start_money;
     block_days = block;
 }
 
-void Deposit ::end_day(const float &Percent, const float &Percent_boost) {
+void Deposit ::end_day() {
     if (money < 50000)
-        profit += money * (Percent + Percent_boost * 0);
+        profit += money * (percent_+boost_ * 0);
     else if (money < 100000)
-        profit += money * (Percent + Percent_boost * 1);
+        profit += money * (percent_+boost_ * 1);
     else if (money < 500000)
-        profit = money * (Percent + Percent_boost * 2);
+        profit = money * (percent_+boost_ * 2);
     else
-        profit += money * (Percent + Percent_boost * 3);
+        profit += money * (percent_+boost_ * 3);
     block_days -= 1;
 }
 
@@ -45,3 +47,6 @@ float Deposit::return_money() {
     return money;
 }
 
+std::string Deposit::type() {
+    return type_;
+}

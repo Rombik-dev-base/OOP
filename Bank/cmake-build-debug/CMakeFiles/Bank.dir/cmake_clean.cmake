@@ -8,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Bank.dir/accounts/deposit.cpp.obj"
   "CMakeFiles/Bank.dir/bank.cpp.obj"
   "CMakeFiles/Bank.dir/client.cpp.obj"
+  "CMakeFiles/Bank.dir/constructor.cpp.obj"
   "CMakeFiles/Bank.dir/main.cpp.obj"
   "libBank.dll.a"
 )

@@ -116,6 +116,12 @@
 		<Unit filename="C:/Users/1285166/CLionProjects/Bank/client.h">
 			<Option target="Bank"/>
 		</Unit>
+		<Unit filename="C:/Users/1285166/CLionProjects/Bank/constructor.cpp">
+			<Option target="Bank"/>
+		</Unit>
+		<Unit filename="C:/Users/1285166/CLionProjects/Bank/constructor.h">
+			<Option target="Bank"/>
+		</Unit>
 		<Unit filename="C:/Users/1285166/CLionProjects/Bank/main.cpp">
 			<Option target="Bank"/>
 		</Unit>

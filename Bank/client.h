@@ -32,23 +32,21 @@ struct transaction{
 
 class Client{
 public:
-    explicit Client(const std :: string &Name = "-",const std :: string &Address = "-",const std :: string &Pass = "-",
-            const std :: string &Account_type = "-",const float &start_money = 0);
+    explicit Client(const std :: string &Name,const std :: string &Address = "-",const std :: string &Pass = "-");
     void change_info(const std :: string &Name = "-",const std :: string &Address = "-",const std :: string &Pass = "-");
-    bool make_transaction(const std :: string &type, const float &money);
-    Account* create_acc(const std :: string &Acc_type, const float &start_money = 0);
-    float return_money();
+    bool make_transaction(const std :: string &type, const float &money,const unsigned int &card_id);
+    void add_card(Account *acc);
+    float return_money(unsigned int &card_id);
     bool status();
-    void skip_day(const float &Percent, const float &Percent_boost);
-    std :: string acc_type();
-    void cancel_transaction();
-    void end_month();
+    void skip_day(const unsigned int &card_id);
+    void cancel_transaction(const unsigned int &card_id);
+    void end_month(unsigned int &card_id);
+    int count_cards();
 private:
     void add_transaction(const std :: string &type, const float &money);
     client_data *me = nullptr;
     bool is_reliable = false;
-    std :: string type;
-    Account *acc = nullptr;
+    std :: vector <Account*> cards;
     std :: vector <transaction> transactions;
 };
 
