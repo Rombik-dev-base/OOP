@@ -40,7 +40,7 @@ public:
     bool status();
     void skip_day(const unsigned int &card_id);
     void cancel_transaction(const unsigned int &card_id);
-    void end_month(unsigned int &card_id);
+    void end_month();
     int count_cards();
 private:
     void add_transaction(const std :: string &type, const float &money);

@@ -17,6 +17,7 @@ public:
     virtual float return_money() = 0;
     virtual void set_percent(const double &percent) = 0;
     virtual void set_money(const double &money) = 0;
+    virtual void return_day() = 0;
 };
 
 #endif //BANK_ACCOUNT_H

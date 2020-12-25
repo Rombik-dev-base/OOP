@@ -19,6 +19,8 @@ public:
     card_builder() = default;
     virtual void set_percent(const double &percent) = 0;
     virtual void set_money(const double &money) = 0;
+    virtual void set_block(const double &block){return;};
+    virtual void set_boost(const double &boost){return;};
     virtual Account* return_card() = 0;
 };
 
@@ -26,7 +28,7 @@ class credit_build : public card_builder{
 public:
     credit_build();
     void set_percent(const double &percent) override;
-    void set_money(const double &money ) override;
+    void set_money(const double &money) override;
     Account* return_card() override;
 private:
     Credit *card = nullptr;
@@ -38,6 +40,7 @@ public:
     void set_percent(const double &percent) override;
     void set_money(const double &money ) override;
     Account* return_card() override;
+
 private:
     Debit *card = nullptr;
 };
@@ -48,6 +51,8 @@ public:
     void set_percent(const double &percent) override;
     void set_money(const double &money ) override;
     Account* return_card() override;
+    void set_block(const double &block) override;
+    void set_boost(const double &boost) override;
 private:
     Deposit *card = nullptr;
 };
@@ -74,8 +79,9 @@ public:
     explicit Bank(const float &Percent = 0.04, const float &Percent_boost = 0.03, const float &Commission = 0.5);
     void add_client(const std :: string &Name = "-",const std :: string &Address = "-",const std :: string &Pass = "-", const std :: string &Account_type = "-",const float &start_money = 0);
     void time_lapse(const unsigned short &days = 0);
-    void transaction(const std :: string &type, const float &money,const int &client_id_from,const int &client_to = -1);
-    float show_client_status(const unsigned int &cliend_id);
+    void return_time(const unsigned short &days = 0);
+    void transaction(const std :: string &type, const float &money,const int &client_id_from,const int &client_to = -1, const unsigned int &card_id_from = 0, const unsigned int &card_id_to = 0);
+    float show_client_status(const unsigned int &cliend_id,const unsigned int &card_id);
     void cancel_transaction(const unsigned int &id, const unsigned int &card_id);
     Account* create_card(const card_type &type, const unsigned int &client_id,const double &money = 0);
 private:

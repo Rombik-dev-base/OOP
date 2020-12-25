@@ -16,7 +16,7 @@ void Bank::add_client(const std::string &Name, const std::string &Address, const
     storage.push_back(*client);
 }
 
-void Bank::transaction(const std::string &type, const float &money, const int &client_id_from, const int &client_to) {
+void Bank::transaction(const std::string &type, const float &money, const int &client_id_from, const int &client_to, const unsigned int &card_id_from, const unsigned int &card_id_to) {
     if(maximal_transaction < money && (type == "transfer" || type ==  "withdraw" ) && !storage[client_id_from].status())
     {
         std :: cout << "\n Cant make transaction";
@@ -26,14 +26,14 @@ void Bank::transaction(const std::string &type, const float &money, const int &c
         if(storage[client_id_from].make_transaction("withdraw",money,0)) {
             storage[client_to].make_transaction("add",money,0);
         }
-        storage[client_id_from].make_transaction(type,money);
+        storage[client_id_from].make_transaction(type,money,card_id_from);
         return;
     }
-    storage[client_id_from].make_transaction(type,money);
+    storage[client_id_from].make_transaction(type,money,card_id_to);
 }
 
-float Bank::show_client_status(const unsigned int &cliend_id) {
-    return storage[cliend_id].return_money();
+float Bank::show_client_status(const unsigned int &cliend_id, const unsigned int &card_id) {
+    return storage[cliend_id].return_money(const_cast<unsigned int &>(card_id));
 }
 
 void Bank::time_lapse(const unsigned short &days) {
@@ -136,6 +136,12 @@ Account* Bank :: create_card(const card_type &type,const unsigned int &client_id
 void Bank::skip_day(Client &client) {
     for(int i = 0; i < client.count_cards(); i++){
         client.skip_day(i);
+    }
+}
+
+void Bank::return_time(const unsigned short &days) {
+    for(int i = 0; i < storage.size();i++){
+        storage[i].return_day;
     }
 }
 

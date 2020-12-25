@@ -74,6 +74,7 @@ void Client::cancel_transaction(const unsigned int &card_id) {
     transactions.erase(transactions.begin()+num);
 }
 
-void Client::end_month(unsigned int &card_id) {
-    cards[card_id]->end_month();
+void Client::end_month() {
+    for(int i = 0; i<cards.size();i++)
+    cards[i]->end_month();
 }

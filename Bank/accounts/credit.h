@@ -17,9 +17,10 @@ public:
     virtual std :: string type() override;
     void set_percent(const double &percent) override;
     void set_money(const double &money ) override;
+    void return_day() override;
 private:
     std :: string type_ = "credit";
-    float money;
+    float money_;
     double percent_;
 };
 
